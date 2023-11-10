@@ -33,7 +33,6 @@ provider "aws" {
     costexplorer             = "http://localhost:4566"
     docdb                    = "http://localhost:4566"
     dynamodb                 = "http://localhost:4566"
-    dynamodbstreams          = "http://localhost:4566"
     ec2                      = "http://localhost:4566"
     ecr                      = "http://localhost:4566"
     ecs                      = "http://localhost:4566"
@@ -54,8 +53,6 @@ provider "aws" {
     iot                      = "http://localhost:4566"
     iotanalytics             = "http://localhost:4566"
     iotevents                = "http://localhost:4566"
-    ioteventsdata            = "http://localhost:4566"
-    iotwireless              = "http://localhost:4566"
     kafka                    = "http://localhost:4566"
     kinesis                  = "http://localhost:4566"
     kinesisanalytics         = "http://localhost:4566"
@@ -65,13 +62,10 @@ provider "aws" {
     lambda                   = "http://localhost:4566"
     mediaconvert             = "http://localhost:4566"
     mediastore               = "http://localhost:4566"
-    mediastoredata           = "http://localhost:4566"
     neptune                  = "http://localhost:4566"
     organizations            = "http://localhost:4566"
     qldb                     = "http://localhost:4566"
-    qldbsession              = "http://localhost:4566"
     rds                      = "http://localhost:4566"
-    rdsdata                  = "http://localhost:4566"
     redshift                 = "http://localhost:4566"
     redshiftdata             = "http://localhost:4566"
     resourcegroups           = "http://localhost:4566"
@@ -81,7 +75,6 @@ provider "aws" {
     s3                       = "http://s3.localhost.localstack.cloud:4566"
     s3control                = "http://localhost:4566"
     sagemaker                = "http://localhost:4566"
-    sagemakerruntime         = "http://localhost:4566"
     secretsmanager           = "http://localhost:4566"
     serverlessrepo           = "http://localhost:4566"
     servicediscovery         = "http://localhost:4566"
@@ -92,9 +85,7 @@ provider "aws" {
     ssm                      = "http://localhost:4566"
     stepfunctions            = "http://localhost:4566"
     sts                      = "http://localhost:4566"
-    support                  = "http://localhost:4566"
     swf                      = "http://localhost:4566"
-    timestreamquery          = "http://localhost:4566"
     timestreamwrite          = "http://localhost:4566"
     transfer                 = "http://localhost:4566"
     waf                      = "http://localhost:4566"
@@ -118,12 +109,12 @@ terraform {
 
   # Only allow this Terraform version. Note that if you upgrade to a newer version, Terraform won't allow you to use an
   # older version, so when you upgrade, you should upgrade everyone on your team and your CI servers all at once.
-  required_version = "~> 1.4.3"
+  required_version = "~> 1.6.2"
 
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 3.60.0, <= 4.22.0"
+      version = ">= 5.0.0"
     }
   }
 }
